@@ -1,0 +1,969 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #7451c8;
+    --purple-dark: #52359a;
+    --purple-light: #f0eaff;
+    --background: #f6f5fa;
+    --white: #ffffff;
+    --text: #29243a;
+    --muted: #716b80;
+    --border: #e5e0ef;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a,
+summary {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* BOTÕES */
+.button {
+    display: inline-block;
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: var(--purple-dark);
+    transform: translateY(-2px);
+}
+
+/* CABEÇALHO
+   display: flex organiza os elementos horizontalmente.
+   justify-content: space-between distribui o espaço entre eles.
+*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 7%;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--purple-dark);
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+.platform-name {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.login-link,
+.button-header {
+    margin-left: auto;
+}
+
+/* MENU DE NAVEGAÇÃO */
+.navbar {
+    background-color: var(--purple-dark);
+    padding: 0 7%;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 35px;
+    list-style: none;
+}
+
+.navbar a {
+    display: block;
+    color: var(--white);
+    padding: 15px 5px;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: #d9caff;
+}
+
+/* BANNER PRINCIPAL
+   O conteúdo é centralizado com Flexbox.
+   min-height: 300px atende ao requisito mínimo do enunciado.
+*/
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    min-height: 300px;
+    padding: 70px 7%;
+    background: linear-gradient(135deg, #eee7ff, #faf8ff);
+}
+
+.hero-content {
+    flex: 1 1 350px;
+    max-width: 600px;
+}
+
+.eyebrow {
+    color: var(--purple);
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    color: var(--purple-dark);
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.code-window {
+    flex: 1 1 300px;
+    max-width: 460px;
+    overflow: hidden;
+    background-color: #282438;
+    color: #e8defe;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px #52359a20;
+}
+
+.window-top {
+    display: flex;
+    gap: 7px;
+    padding: 15px;
+    background-color: #39324e;
+}
+
+.window-top span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #c8b5f5;
+}
+
+.code-window pre {
+    padding: 25px;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+/* ESTATÍSTICAS */
+.statistics {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 35px 7%;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 140px;
+    min-width: 0;
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--purple-light);
+}
+
+/* flex-grow permite que o primeiro item cresça para ocupar espaço livre. */
+.stat-grow:nth-child(1) {
+    flex-grow: 1;
+}
+
+/* flex-grow: 2 permite que o segundo item cresça duas vezes
+   a proporção do primeiro quando existe espaço livre. */
+.stat-grow:nth-child(2) {
+    flex-grow: 2;
+}
+
+/* flex-shrink: 1 permite que este item encolha quando necessário. */
+.stat-shrink {
+    flex-shrink: 1;
+    flex-basis: 180px;
+}
+
+/* align-self altera o alinhamento deste item individualmente. */
+.stat-self {
+    align-self: flex-start;
+}
+
+.stat-item strong {
+    color: var(--purple-dark);
+    font-size: 2rem;
+}
+
+.stat-item span {
+    color: var(--muted);
+}
+
+/* SEÇÕES */
+.section {
+    padding: 75px 7%;
+}
+
+.section-alt {
+    background-color: #efebf7;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: var(--purple-dark);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+}
+
+/* CARTÕES DE CURSOS
+   flex-wrap permite que os cartões passem para outra linha.
+   gap cria espaço entre eles.
+*/
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 280px;
+    min-width: 0;
+    padding: 28px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    box-shadow: 0 5px 18px #29243a08;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px #29243a12;
+}
+
+.course-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background-color: var(--purple-light);
+    font-size: 1.8rem;
+}
+
+.course-level {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: #f1edfa;
+    color: var(--purple-dark);
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.course-card h3 {
+    margin-bottom: 10px;
+    color: var(--purple-dark);
+}
+
+.course-card > p {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.course-card .course-teacher {
+    font-size: 0.85rem;
+}
+
+.course-card details {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.course-card summary {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.course-card details p {
+    padding-top: 10px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* PROFESSORES */
+.teachers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.teacher-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 240px;
+    max-width: 340px;
+    padding: 30px;
+    text-align: center;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.teacher-photo {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--purple-light);
+}
+
+.teacher-card h3 {
+    margin-bottom: 10px;
+    color: var(--purple-dark);
+}
+
+.teacher-card p {
+    flex-grow: 1;
+    margin-bottom: 18px;
+    color: var(--muted);
+}
+
+.teacher-card > a {
+    color: var(--purple);
+    font-weight: bold;
+}
+
+/* DEPOIMENTOS */
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 280px;
+    min-width: 0;
+    padding: 28px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.comentario {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--purple-light);
+    color: var(--purple-dark);
+    font-weight: bold;
+}
+
+.comentario-usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+.comentario-usuario h3 {
+    font-size: 1rem;
+    color: var(--purple-dark);
+}
+
+.comentario-usuario span {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.testimonial-card > p {
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* LABORATÓRIO DE CSS */
+#laboratorio {
+    scroll-margin-top: 20px;
+}
+
+.lab-card {
+    position: relative;
+    margin: 0 auto 25px;
+    padding: 30px;
+    max-width: 1050px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    box-shadow: 0 5px 18px #29243a08;
+}
+
+.lab-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    background-color: var(--purple-light);
+    color: var(--purple-dark);
+    font-weight: bold;
+}
+
+.lab-card h3 {
+    color: var(--purple-dark);
+    margin-bottom: 8px;
+}
+
+.lab-card h4 {
+    margin: 20px 0 8px;
+    color: var(--purple-dark);
+    font-size: 0.95rem;
+}
+
+.lab-card > p {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.demo-note {
+    padding: 10px;
+    border-radius: 7px;
+    background-color: var(--purple-light);
+    color: var(--purple-dark);
+    font-size: 0.9rem;
+}
+
+/* DISPLAY: INLINE */
+/* Os links não iniciam uma nova linha e ocupam apenas o espaço necessário. */
+.demo-inline {
+    padding: 15px;
+    background-color: #f6f3fc;
+    border-radius: 8px;
+}
+
+.demo-inline a {
+    display: inline;
+    margin-right: 18px;
+    color: var(--purple);
+    font-weight: bold;
+}
+
+/* DISPLAY: BLOCK */
+/* Cada span ocupa uma linha inteira. */
+.demo-block {
+    padding: 15px;
+    background-color: #f6f3fc;
+    border-radius: 8px;
+}
+
+.demo-block span {
+    display: block;
+    padding: 7px 12px;
+    margin-bottom: 6px;
+    background-color: #ded2fa;
+    border-radius: 5px;
+}
+
+/* DISPLAY: INLINE-BLOCK */
+/* As caixas ficam na mesma linha, mas aceitam largura e altura. */
+.demo-inline-block {
+    padding: 15px;
+    background-color: #f6f3fc;
+    border-radius: 8px;
+}
+
+.demo-inline-block div {
+    display: inline-block;
+    width: 110px;
+    min-height: 70px;
+    margin: 5px;
+    padding: 20px 8px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #ded2fa;
+    border-radius: 7px;
+}
+
+/* DISPLAY: NONE */
+/* O elemento fica invisível e não reserva espaço no layout. */
+.hidden-demo {
+    display: none;
+}
+
+/* ESTILOS COMUNS AOS EXEMPLOS FLEX */
+.flex-demo {
+    display: flex;
+    gap: 8px;
+    min-height: 65px;
+    padding: 10px;
+    overflow: hidden;
+    border: 1px dashed #c5b5e9;
+    border-radius: 8px;
+    background-color: #f8f6fc;
+}
+
+.flex-demo > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #ded2fa;
+    color: var(--purple-dark);
+    text-align: center;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+}
+
+/* FLEX-DIRECTION */
+.direction-row {
+    flex-direction: row;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.direction-column-reverse {
+    flex-direction: column-reverse;
+}
+
+/* JUSTIFY-CONTENT */
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+/* ALIGN-ITEMS */
+.align-demo {
+    height: 125px;
+}
+
+.align-demo > span {
+    flex: 0 1 70px;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.align-stretch > span {
+    /* Retira a altura mínima dos itens para demonstrar o stretch. */
+    align-items: center;
+}
+
+/* FLEX-WRAP */
+.wrap-demo {
+    width: 100%;
+}
+
+.wrap-demo > span {
+    flex: 0 0 100px;
+}
+
+.wrap-nowrap {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.wrap-wrap {
+    flex-wrap: wrap;
+}
+
+/* FLEX-GROW */
+/* Os valores de grow determinam a proporção de crescimento dos itens. */
+.grow-demo > span {
+    flex-basis: 70px;
+}
+
+.grow-one {
+    flex-grow: 1;
+}
+
+.grow-two {
+    flex-grow: 2;
+}
+
+.grow-zero {
+    flex-grow: 0;
+}
+
+/* FLEX-SHRINK */
+/* O primeiro e o terceiro itens podem encolher.
+   O item central mantém seu tamanho inicial. */
+.shrink-demo > span {
+    flex-basis: 220px;
+}
+
+.shrink-one {
+    flex-shrink: 1;
+}
+
+.shrink-zero {
+    flex-shrink: 0;
+}
+
+/* FLEX-BASIS */
+/* Os valores definem o tamanho inicial de cada item. */
+.basis-demo > span {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.basis-small {
+    flex-basis: 100px;
+}
+
+.basis-medium {
+    flex-basis: 200px;
+}
+
+.basis-large {
+    flex-basis: 300px;
+}
+
+/* ALIGN-SELF */
+.align-self-demo {
+    height: 160px;
+    align-items: center;
+}
+
+.align-self-demo > span {
+    flex: 1 1 80px;
+}
+
+.self-center {
+    align-self: center;
+}
+
+.self-end {
+    align-self: flex-end;
+}
+
+.self-start {
+    align-self: flex-start;
+}
+
+/* ORDER */
+/* A ordem visual é definida pelos valores de order.
+   Valores menores aparecem antes dos maiores. */
+.order-demo {
+    flex-wrap: wrap;
+}
+
+.order-demo > span {
+    flex: 1 1 150px;
+}
+
+.order-two {
+    order: 2;
+}
+
+.order-minus {
+    order: -1;
+}
+
+.order-zero {
+    order: 0;
+}
+
+/* ALIGN-CONTENT: EXEMPLO EXTRA */
+.content-demo {
+    height: 200px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.content-demo > span {
+    flex: 0 0 28%;
+    min-height: 35px;
+}
+
+.content-between {
+    align-content: space-between;
+}
+
+.content-center {
+    align-content: center;
+}
+
+/* RODAPÉ */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 7% 20px;
+    background-color: #292438;
+    color: var(--white);
+}
+
+.footer .logo {
+    color: var(--white);
+}
+
+.footer .logo span {
+    color: #c8b5f5;
+}
+
+.footer-brand,
+.footer-contact,
+.footer-social,
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.footer h3 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.footer p,
+.footer a:not(.logo) {
+    color: #d3ccdf;
+    font-size: 0.9rem;
+}
+
+.footer a:hover {
+    color: var(--white);
+}
+
+.copyright {
+    width: 100%;
+    padding-top: 18px;
+    border-top: 1px solid #ffffff25;
+    text-align: center;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 850px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .platform-name {
+        order: 3;
+        width: 100%;
+    }
+
+    .hero {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 650px;
+    }
+
+    .code-window {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .statistics {
+        gap: 12px;
+    }
+
+    .stat-item {
+        flex-basis: 40%;
+    }
+}
+
+@media (max-width: 560px) {
+    .header {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 1.55rem;
+    }
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .navbar ul {
+        gap: 0 15px;
+    }
+
+    .navbar a {
+        padding: 12px 2px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        gap: 30px;
+        padding: 45px 5%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .code-window pre {
+        padding: 18px;
+        font-size: 0.72rem;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+
+    .statistics {
+        padding: 25px 5%;
+    }
+
+    .stat-item {
+        flex-basis: 40%;
+    }
+
+    .stat-item strong {
+        font-size: 1.6rem;
+    }
+
+    .course-card,
+    .teacher-card,
+    .testimonial-card,
+    .lab-card {
+        padding: 22px;
+    }
+
+    .footer {
+        gap: 25px;
+        padding: 35px 5% 20px;
+    }
+
+    .footer-brand,
+    .footer-contact,
+    .footer-social,
+    .footer-links {
+        flex: 1 1 100%;
+    }
+
+    .content-demo > span {
+        flex-basis: 27%;
+    }
+}

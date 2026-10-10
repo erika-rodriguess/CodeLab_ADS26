@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLab | Aprenda Programação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header" id="inicio">
+        <a href="#inicio" class="logo">Code<span>Lab</span></a>
+        <p class="platform-name">Plataforma de cursos de tecnologia</p>
+        <a href="#cursos" class="button button-header">Entrar</a>
+    </header>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#inicio">Home</a></li>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#professores">Professores</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#laboratorio">Flexbox</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- BANNER PRINCIPAL -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">SEU PRÓXIMO PASSO COMEÇA AQUI</p>
+                <h1>Transforme sua curiosidade em conhecimento.</h1>
+                <p>
+                    Aprenda programação, explore novas tecnologias e desenvolva
+                    habilidades para transformar suas ideias em projetos reais.
+                </p>
+                <a href="#cursos" class="button">Conheça os Cursos</a>
+            </div>
+
+            <div class="code-window" aria-label="Ilustração de código">
+                <div class="window-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <pre><code>public class Aprender {
+    public static void main(String[] args) {
+        String objetivo = "Criar algo novo";
+        System.out.println(objetivo);
+    }
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- ESTATÍSTICAS -->
+        <section class="statistics" aria-label="Estatísticas da plataforma">
+            <div class="stat-item stat-grow">
+                <strong>5000</strong>
+                <span>Alunos</span>
+            </div>
+
+            <div class="stat-item stat-grow">
+                <strong>120</strong>
+                <span>Cursos</span>
+            </div>
+
+            <div class="stat-item stat-shrink">
+                <strong>80</strong>
+                <span>Professores</span>
+            </div>
+
+            <div class="stat-item stat-self">
+                <strong>95%</strong>
+                <span>Satisfação</span>
+            </div>
+        </section>
+
+        <!-- CURSOS -->
+        <section class="section" id="cursos">
+            <div class="section-heading">
+                <p class="eyebrow">APRENDA NO SEU RITMO</p>
+                <h2>Nossos cursos</h2>
+                <p>Encontre seu próximo assunto favorito.</p>
+            </div>
+
+            <div class="courses-container">
+                <article class="course-card">
+                    <div class="course-icon">🌐</div>
+                    <span class="course-level">Iniciante</span>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Aprenda a construir páginas usando HTML, CSS e Flexbox.</p>
+                    <p class="course-teacher">Professor: Carlos Roberto Massa</p>
+                    <details>
+                        <summary>Saiba Mais</summary>
+                        <p>Conheça a estrutura das páginas, estilização e organização dos elementos com CSS.</p>
+                    </details>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon">⚡</div>
+                    <span class="course-level">Iniciante</span>
+                    <h3>JavaScript</h3>
+                    <p>Descubra como adicionar interatividade às suas páginas.</p>
+                    <p class="course-teacher">Professor: Bob Esponja C. Quadrada</p>
+                    <details>
+                        <summary>Saiba Mais</summary>
+                        <p>Estude variáveis, condições, funções e eventos para criar páginas interativas.</p>
+                    </details>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon">🐍</div>
+                    <span class="course-level">Iniciante</span>
+                    <h3>Python</h3>
+                    <p>Entre no mundo da programação com uma linguagem versátil.</p>
+                    <p class="course-teacher">Professora: Robô Frank</p>
+                    <details>
+                        <summary>Saiba Mais</summary>
+                        <p>Aprenda lógica, estruturas de repetição, funções e manipulação de dados.</p>
+                    </details>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon">🗄️</div>
+                    <span class="course-level">Intermediário</span>
+                    <h3>Banco de Dados</h3>
+                    <p>Organize informações e aprenda a consultar dados com SQL.</p>
+                    <p class="course-teacher">Professora: Robô Frank</p>
+                    <details>
+                        <summary>Saiba Mais</summary>
+                        <p>Estude tabelas, relacionamentos, consultas e operações básicas com SQL.</p>
+                    </details>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon">🎨</div>
+                    <span class="course-level">Iniciante</span>
+                    <h3>UX e Interface</h3>
+                    <p>Crie interfaces claras, organizadas e agradáveis de usar.</p>
+                    <p class="course-teacher">Professor: Dexter</p>
+                    <details>
+                        <summary>Saiba Mais</summary>
+                        <p>Explore hierarquia visual, acessibilidade, prototipagem e experiência do usuário.</p>
+                    </details>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon">🔌</div>
+                    <span class="course-level">Intermediário</span>
+                    <h3>Fundamentos de Redes</h3>
+                    <p>Entenda como dispositivos se comunicam e trocam informações.</p>
+                    <p class="course-teacher">Professor: Snowlax</p>
+                    <details>
+                        <summary>Saiba Mais</summary>
+                        <p>Conheça endereços IP, protocolos, modelos de rede e conceitos de conectividade.</p>
+                    </details>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROFESSORES -->
+        <section class="section section-alt" id="professores">
+            <div class="section-heading">
+                <p class="eyebrow">QUEM VAI TE ENSINAR</p>
+                <h2>Nossos professores</h2>
+                <p>Uma equipe com métodos de ensino um pouquinho diferentes.</p>
+            </div>
+
+            <div class="teachers-container">
+                <article class="teacher-card">
+                    <img
+                        src="https://imgs.search.brave.com/ULO6DA9TddLnYTqDqYOP-A9S6-GWcy83zsP8gWEfCJY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90ZXJj/ZWlyb3RlbXBvLnVv/bC5jb20uYnIvaW1h/Z2Vucy81OS85Ny93/NTI1X2g0NDJfYXJx/Xzk1OTk3LndlYnA"
+                        alt="Imagem ilustrativa de Ratinho"
+                        class="teacher-photo"
+                    >
+                    <h3>Carlos Roberto Massa</h3>
+                    <p>Especialista em desenvolvimento web. Gosta de explicar tudo no volume máximo.</p>
+                    <a href="#cursos">Conheça o curso</a>
+                </article>
+
+                <article class="teacher-card">
+                    <img
+                        src="https://imgs.search.brave.com/irK6RupVMU2CpPyI0ZLTuYPlAmIr6kiZAa4ZTJomG5M/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL3RodW1icy81/OGJmMWNlZWU0NDNm/NDFkNzdjNzM0YTMu/cG5n"
+                        alt="Bob Esponja"
+                        class="teacher-photo"
+                    >
+                    <h3>Bob Esponja C. Quadrada</h3>
+                    <p>Ensina JavaScript com entusiasmo e uma quantidade suspeita de energia.</p>
+                    <a href="#cursos">Conheça o curso</a>
+                </article>
+
+                <article class="teacher-card">
+                    <img
+                        src="https://images.steamusercontent.com/ugc/2417941607548455563/F4FFED1368A16976C8EB5B4AF3CF5F5D7FB6C74C/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+                        alt="Ilustração da Robô Frank"
+                        class="teacher-photo"
+                    >
+                    <h3>Robô Frank</h3>
+                    <p>Ensina Python e banco de dados. Responde dúvidas em tempo recorde.</p>
+                    <a href="#cursos">Conheça os cursos</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS -->
+        <section class="section" id="depoimentos">
+            <div class="section-heading">
+                <p class="eyebrow">QUEM JÁ PASSOU POR AQUI</p>
+                <h2>Depoimentos dos alunos</h2>
+            </div>
+
+            <div class="testimonials-container">
+                <article class="testimonial-card">
+                    <div class="comentario">
+                        <div>
+                            <img class="avatar" src="https://imgs.search.brave.com/w44VEJFKLe6o57CJ1SKroCaAnWxW5pSmr9CIfTKqnJ0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmRp/c2NvZ3MuY29tL2JS/M0ZxRkhhTzhZWWVa/Wk1CSW84NDhJLUQx/bXk5X1JBTjZYN0dX/MWcyd3MvcnM6Zml0/L2c6c20vcTo0MC9o/OjMwMC93OjMwMC9j/ek02THk5a2FYTmpi/MmR6L0xXUmhkR0Zp/WVhObExXbHQvWVdk/bGN5OVNMVGc1TkRV/MC9NQzB4TXpjM09U/ZzBPREUzL0xUUTVO/VFV1YW5CbFp3Lmpw/ZWc" 
+                            alt="Ilustração do Chico Buarque">
+                        </div>
+                        <div class="comentario-usuario">
+                            <h3>Chico Buarque</h3>
+                            <span>Aluno de Desenvolvimento Web</span>
+                        </div>
+                    </div>
+                    <p>
+                        “Construir código é como construir uma casa: cada linha
+                        tem seu lugar. Até o ponto e vírgula tem seu papel.
+                        Somos os operários do código.”
+                    </p>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="comentario">
+                        <div>
+                            <img class="avatar" src="https://imgs.search.brave.com/m3xsxqBxAbdgzOvmwg22UBkytInO3QrW-mDmvSGs6AQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC8w/YmQyMjg4MjA4ODYw/OS5ZM0p2Y0N3eE1E/QTJMRGM0Tnl3M055/d3cucG5n"
+                            alt="Ilustração do BMO">
+                        </div>
+                        <div class="comentario-usuario">
+                            <h3>BMO</h3>
+                            <span>Aluno de Python</span>
+                        </div>
+                    </div>
+                    <p>
+                        “BMO aprendeu Python! Agora BMO pode criar outros BMOs.
+                        O curso de Python é Ótimooo!”
+                    </p>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="comentario">
+                        <div>
+                            <img class="avatar" src="https://m.media-amazon.com/images/M/MV5BMTg2MDMyODEyM15BMl5BanBnXkFtZTgwOTg2MjM0MjE@._V1_.jpg"
+                            alt="Ilustração do Cyborg">
+                        </div>
+                        <div class="comentario-usuario">
+                            <h3>Victor Stone (Cyborg)</h3>
+                            <span>Aluno de Desenvolvimento Web</span>
+                        </div>
+                    </div>
+                    <p>
+                        “Tenho um corpo tecnológico avançado, mas levei três
+                        horas para centralizar uma div. Melhor curso! BOOYAH!”
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- LABORATÓRIO DE DISPLAY E FLEXBOX -->
+        <section class="section section-alt" id="laboratorio">
+            <div class="section-heading">
+                <p class="eyebrow">ATIVIDADE PRÁTICA</p>
+                <h2>Laboratório de CSS</h2>
+                <p>Exemplos práticos de Display, Flexbox e propriedades dos itens.</p>
+            </div>
+
+            <!-- DISPLAY: INLINE -->
+            <article class="lab-card">
+                <span class="lab-number">01</span>
+                <h3>Display: inline</h3>
+                <p>Os links permanecem na mesma linha e ocupam somente o espaço necessário.</p>
+                <div class="demo-inline">
+                    <a href="#cursos">HTML</a>
+                    <a href="#cursos">CSS</a>
+                    <a href="#cursos">JavaScript</a>
+                </div>
+            </article>
+
+            <!-- DISPLAY: BLOCK -->
+            <article class="lab-card">
+                <span class="lab-number">02</span>
+                <h3>Display: block</h3>
+                <p>Cada elemento ocupa sua própria linha.</p>
+                <div class="demo-block">
+                    <span>Elemento 1</span>
+                    <span>Elemento 2</span>
+                    <span>Elemento 3</span>
+                </div>
+            </article>
+
+            <!-- DISPLAY: INLINE-BLOCK -->
+            <article class="lab-card">
+                <span class="lab-number">03</span>
+                <h3>Display: inline-block</h3>
+                <p>Os elementos ficam na mesma linha quando há espaço e permitem largura e altura.</p>
+                <div class="demo-inline-block">
+                    <div>Caixa 1</div>
+                    <div>Caixa 2</div>
+                    <div>Caixa 3</div>
+                </div>
+            </article>
+
+            <!-- DISPLAY: NONE -->
+            <article class="lab-card">
+                <span class="lab-number">04</span>
+                <h3>Display: none</h3>
+                <p>O elemento abaixo não aparece na página e não ocupa espaço no layout.</p>
+                <!-- display: none esconde o elemento e remove seu espaço do layout. -->
+                <div class="hidden-demo">Este elemento está oculto.</div>
+                <div class="demo-note">O elemento oculto não deve aparecer acima.</div>
+            </article>
+
+            <!-- FLEX-DIRECTION -->
+            <article class="lab-card">
+                <span class="lab-number">05</span>
+                <h3>Flex-direction</h3>
+                <p>Define a direção em que os itens flexíveis são organizados.</p>
+
+                <h4>row</h4>
+                <div class="flex-demo direction-row">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+
+                <h4>column</h4>
+                <div class="flex-demo direction-column">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+
+                <h4>row-reverse</h4>
+                <div class="flex-demo direction-row-reverse">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+
+                <h4>column-reverse</h4>
+                <div class="flex-demo direction-column-reverse">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+            </article>
+
+            <!-- JUSTIFY-CONTENT -->
+            <article class="lab-card">
+                <span class="lab-number">06</span>
+                <h3>Justify-content</h3>
+                <p>Distribui os itens no eixo principal do contêiner.</p>
+
+                <h4>flex-start</h4>
+                <div class="flex-demo justify-start">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+
+                <h4>center</h4>
+                <div class="flex-demo justify-center">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+
+                <h4>flex-end</h4>
+                <div class="flex-demo justify-end">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+
+                <h4>space-between</h4>
+                <div class="flex-demo justify-between">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+
+                <h4>space-around</h4>
+                <div class="flex-demo justify-around">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+
+                <h4>space-evenly</h4>
+                <div class="flex-demo justify-evenly">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+            </article>
+
+            <!-- ALIGN-ITEMS -->
+            <article class="lab-card">
+                <span class="lab-number">07</span>
+                <h3>Align-items</h3>
+                <p>Alinha os itens no eixo transversal do contêiner.</p>
+
+                <h4>flex-start</h4>
+                <div class="flex-demo align-demo align-start">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+
+                <h4>center</h4>
+                <div class="flex-demo align-demo align-center">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+
+                <h4>flex-end</h4>
+                <div class="flex-demo align-demo align-end">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+
+                <h4>stretch</h4>
+                <div class="flex-demo align-demo align-stretch">
+                    <span>1</span><span>2</span><span>3</span>
+                </div>
+            </article>
+
+            <!-- FLEX-WRAP -->
+            <article class="lab-card">
+                <span class="lab-number">08</span>
+                <h3>Flex-wrap</h3>
+                <p>Controla se os itens podem passar para a próxima linha.</p>
+
+                <h4>nowrap</h4>
+                <div class="flex-demo wrap-demo wrap-nowrap">
+                    <span>Item 1</span><span>Item 2</span><span>Item 3</span>
+                    <span>Item 4</span><span>Item 5</span>
+                </div>
+
+                <h4>wrap</h4>
+                <div class="flex-demo wrap-demo wrap-wrap">
+                    <span>Item 1</span><span>Item 2</span><span>Item 3</span>
+                    <span>Item 4</span><span>Item 5</span>
+                </div>
+            </article>
+
+            <!-- FLEX-GROW -->
+            <article class="lab-card">
+                <span class="lab-number">09</span>
+                <h3>Flex-grow</h3>
+                <p>Define quanto um item pode crescer para ocupar espaço livre.</p>
+                <!-- flex-grow: 1 permite que o item cresça para ocupar o espaço livre. -->
+                <div class="flex-demo grow-demo">
+                    <span class="grow-one">grow: 1</span>
+                    <span class="grow-two">grow: 2</span>
+                    <span class="grow-zero">grow: 0</span>
+                </div>
+            </article>
+
+            <!-- FLEX-SHRINK -->
+            <article class="lab-card">
+                <span class="lab-number">10</span>
+                <h3>Flex-shrink</h3>
+                <p>Define quanto um item pode encolher quando falta espaço.</p>
+                <!-- flex-shrink: 1 permite que o item encolha quando necessário. -->
+                <div class="flex-demo shrink-demo">
+                    <span class="shrink-one">shrink: 1</span>
+                    <span class="shrink-zero">shrink: 0</span>
+                    <span class="shrink-one">shrink: 1</span>
+                </div>
+            </article>
+
+            <!-- FLEX-BASIS -->
+            <article class="lab-card">
+                <span class="lab-number">11</span>
+                <h3>Flex-basis</h3>
+                <p>Define o tamanho inicial do item no eixo principal.</p>
+                <!-- flex-basis: 100px define o tamanho inicial do item em 100px. -->
+                <div class="flex-demo basis-demo">
+                    <span class="basis-small">100px</span>
+                    <span class="basis-medium">200px</span>
+                    <span class="basis-large">300px</span>
+                </div>
+            </article>
+
+            <!-- ALIGN-SELF -->
+            <article class="lab-card">
+                <span class="lab-number">12</span>
+                <h3>Align-self</h3>
+                <p>Permite que um item tenha alinhamento transversal diferente dos demais.</p>
+                <!-- align-self: flex-end alinha somente este item ao final do eixo transversal. -->
+                <div class="flex-demo align-self-demo">
+                    <span>Normal</span>
+                    <span class="self-center">Center</span>
+                    <span class="self-end">Flex-end</span>
+                    <span class="self-start">Flex-start</span>
+                </div>
+            </article>
+
+            <!-- ORDER -->
+            <article class="lab-card">
+                <span class="lab-number">13</span>
+                <h3>Order</h3>
+                <p>Altera a ordem visual dos itens sem mudar a ordem no HTML.</p>
+                <!-- order: -1 coloca este item antes dos itens com order: 0. -->
+                <div class="flex-demo order-demo">
+                    <span class="order-two">HTML (order: 2)</span>
+                    <span class="order-minus">CSS (order: -1)</span>
+                    <span class="order-zero">JavaScript (order: 0)</span>
+                </div>
+            </article>
+
+            <!-- ALIGN-CONTENT: EXEMPLO EXTRA -->
+            <article class="lab-card">
+                <span class="lab-number">14</span>
+                <h3>Align-content</h3>
+                <p>Distribui as linhas de itens quando há espaço no eixo transversal.</p>
+
+                <h4>space-between</h4>
+                <div class="flex-demo content-demo content-between">
+                    <span>1</span><span>2</span><span>3</span>
+                    <span>4</span><span>5</span><span>6</span>
+                </div>
+
+                <h4>center</h4>
+                <div class="flex-demo content-demo content-center">
+                    <span>1</span><span>2</span><span>3</span>
+                    <span>4</span><span>5</span><span>6</span>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer" id="contato">
+        <div class="footer-brand">
+            <a href="#inicio" class="logo">Code<span>Lab</span></a>
+            <p>Projeto acadêmico fictício.</p>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contato</h3>
+            <a href="mailto:codeLab.cursos@gmail.com">codeLab.cursos@gmail.com</a>
+        </div>
+
+        <div class="footer-social">
+            <h3>Redes sociais</h3>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Navegação</h3>
+            <a href="#inicio">Home</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#professores">Professores</a>
+        </div>
+
+        <p class="copyright">© 2026 CodeLab. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
